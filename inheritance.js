@@ -1,23 +1,13 @@
-function Animal(size, weight) {
-    this.Size = size || "unknown";
-    this.Weight = weight || "unknown";
+class Animal {
+    makeNoise() {
+        return "a disturbance";
+    }
 }
 
-Animal.prototype.getStats = function () {
-    return "Size: " + this.Size + ", Weight:" + this.Weight;
+class Cat extends Animal {
+    meow() {
+        return "Meow.";
+    }
 }
 
-function Cat(size, weight, breed) {
-    Animal.call(this, size, weight);
-
-    this.Breed = breed || "unknown";
-}
-
-Cat.prototype = new Animal();
-Cat.prototype.constructor = Cat;
-
-var kitten = new Cat(1, 15, "calico");
-
-console.log(kitten.getStats());
-console.log(kitten instanceof Cat); // true = kitten is a Cat
-console.log(kitten instanceof Animal); // true = kitten is an Animal
+module.exports = {Animal: Animal, Cat: Cat};

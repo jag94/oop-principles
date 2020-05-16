@@ -1,18 +1,11 @@
-const Calculator = require('./encapsulation');
+function Creature(size, weight) {
+    //When run, this code creates a class Creature and makes an object of that type.
+//It receives the parameters from the constructor via the user.
 
-let abstract = new Calculator();
-a = 4;
-b = 2;
+    this.size = size;
+    this.weight = weight;
 
-//When run, this code calls upon the public methods from calculate class from the encapsulation file and uses them to change
-//the values of the private variables. It then receives the results of the methods without ever having to interact directly
-//with the exact code of the object Calculator.
-sum = abstract.add(a, b);
-product = abstract.multiply(a, b);
-quotient = abstract.divide(a, b);
-difference = abstract.subtract(a, b);
+    return "Height: " + size + ", Weight: " + weight;
+}
 
-console.log("The sum is: " + sum);
-console.log("The difference is: " + difference);
-console.log("The product is: " + product);
-console.log("The quotient is: " + quotient);
+module.exports = Creature;

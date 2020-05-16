@@ -1,4 +1,4 @@
-const Calculator = require('./encapsulation');
+const Calculator = require('../encapsulation');
 
 test('Calculator divide 2 by  2 to equal 1', () => {
     let Ctest = new Calculator();

@@ -26,5 +26,4 @@ class Rectangle extends Shape {
     }
 }
 
-const shapes = (new Circle(2), new Rectangle(2, 3), new Circle(7));
-shapes.forEach(item => console.log(item.area()));
+module.exports = {Shape: Shape, Circle: Circle, Rectangle: Rectangle};
